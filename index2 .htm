@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#260b2c">
+<title>إلى رقوشتي ❤️</title>
+<style>
+* { box-sizing: border-box; }
+body {
+  margin: 0; font-family: Tahoma, Arial, sans-serif;
+  background: linear-gradient(135deg, #180817, #430d30, #17091f);
+  color: white; min-height: 100vh; overflow-x: hidden;
+}
+button, input { font-family: inherit; }
+button { cursor: pointer; }
+#intro {
+  min-height: 100vh; display: flex; justify-content: center; align-items: center;
+  padding: 20px; text-align: center;
+}
+.intro-card {
+  width: 100%; max-width: 390px; padding: 30px 22px;
+  border: 1px solid #ff8fbd70; border-radius: 28px;
+  background: #ffffff0c; box-shadow: 0 0 35px #ff267d30;
+  backdrop-filter: blur(10px);
+}
+.big-heart { font-size: 75px; animation: pulse 1.5s infinite; }
+h1 { color: #ff8fbd; line-height: 1.8; }
+.intro-card p { line-height: 2; color: #ffe2ed; }
+input {
+  width: 100%; padding: 13px; margin: 12px 0;
+  border: 1px solid #ff80b5; border-radius: 13px;
+  background: #230d25; color: white; text-align: center;
+  font-size: 16px; outline: none;
+}
+input:focus { box-shadow: 0 0 0 3px #ff80b544; }
+.main-btn, .music-btn, .request-btn {
+  border: none; border-radius: 25px; padding: 12px 23px;
+  font-size: 16px; font-weight: bold; color: white;
+  background: linear-gradient(135deg, #ff4388, #e50058);
+  box-shadow: 0 0 18px #ff438850; transition: transform .2s;
+}
+.main-btn:hover, .music-btn:hover, .request-btn:hover { transform: scale(1.04); }
+#error { color: #ffb4ce; min-height: 25px; }
+#lovePage { display: none; padding: 24px 14px 45px; min-height: 100vh; }
+.phone {
+  position: relative; overflow: hidden; max-width: 480px; margin: auto;
+  padding: 22px 17px; border: 2px solid #ff80b577; border-radius: 32px;
+  background: linear-gradient(160deg, #260b2c, #160d20, #3b102c);
+  box-shadow: 0 0 35px #ff278b35;
+}
+.phone-header { text-align: center; padding-bottom: 12px; border-bottom: 1px solid #ff9ac533; }
+.phone-header .heart { font-size: 38px; }
+.phone-header h1 { font-size: 24px; margin: 7px 0; }
+.phone-header p { color: #ffc1d8; font-size: 13px; }
+.message { position: relative; z-index: 2; color: #fff0f6; line-height: 2.15; font-size: 15px; white-space: pre-line; }
+.message h2 { color: #ff9fc6; text-align: center; font-size: 20px; line-height: 1.8; }
+.message p { margin: 15px 0; }
+.signature { text-align: center; color: #ff9fc6; font-size: 19px; font-weight: bold; padding: 15px 0; }
+.controls { text-align: center; position: relative; z-index: 3; padding: 12px 0; }
+.music-btn { background: linear-gradient(135deg, #8e44ad, #e84393); margin-bottom: 10px; }
+.music-status { color: #ffc1d8; font-size: 12px; margin: 3px 0 0; }
+.request-container { text-align: center; margin: 18px 0 5px; position: relative; z-index: 3; }
+.request-btn { font-size: 14px; padding: 10px 19px; background: linear-gradient(135deg, #ff6699, #ff1744); }
+.request-message {
+  display: none; margin: 15px auto 0; padding: 17px 12px;
+  border: 1px solid #ff92bd; border-radius: 20px;
+  background: #fff0f5; color: #a60048; line-height: 2; animation: appear .4s ease;
+}
+.request-message p { margin: 5px 0; font-weight: bold; }
+.request-message span { display: block; margin-top: 8px; }
+.footer { text-align: center; color: #ffc1d8; font-size: 12px; padding-top: 15px; }
+.floating { position: fixed; bottom: -40px; z-index: 1; pointer-events: none; animation: floatUp linear forwards; opacity: .8; }
+.star { position: fixed; color: #ffd6e7; pointer-events: none; animation: twinkle 2s infinite alternate; z-index: 1; }
+@keyframes pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.12); } }
+@keyframes floatUp { from { transform: translateY(0) rotate(0deg); opacity: .85; } to { transform: translateY(-115vh) rotate(360deg); opacity: 0; } }
+@keyframes twinkle { from { opacity: .25; transform: scale(.8); } to { opacity: 1; transform: scale(1.2); } }
+@keyframes appear { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+@media (max-width: 360px) { .message { font-size: 14px; } .phone-header h1 { font-size: 21px; } }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; }
+}
+</style>
+</head>
+<body>
+<section id="intro">
+  <div class="intro-card">
+    <div class="big-heart">💗</div>
+    <h1>رسالة مخصوصة لرقوشتي ❤️</h1>
+    <p>في كلام كتير جوايا نفسي أقولهولك يا حبيبتي، ودي رسالة صغيرة من قلبي لقلبك 🥹💗</p>
+    <form id="loginForm">
+      <input id="password" type="password" placeholder="اكتبي كلمة السر ❤️" autocomplete="off" aria-label="كلمة السر">
+      <button class="main-btn" type="submit">ادخل ❤️</button>
+    </form>
+    <p id="error" role="alert" aria-live="polite"></p>
+  </div>
+</section>
+
+<section id="lovePage">
+  <div class="phone">
+    <header class="phone-header">
+      <div class="heart">💖</div>
+      <h1>إلى رقوشتي ❤️</h1>
+      <p>رسالة من قلبي لقلبك يا حبيبتي 🥹</p>
+    </header>
+    <div class="controls">
+      <button class="music-btn" id="musicButton" type="button" aria-pressed="false">🎵 تشغيل الموسيقى</button>
+      <p class="music-status" id="musicStatus" aria-live="polite">اضغطي الزر لتشغيل الموسيقى ❤️</p>
+    </div>
+    <article class="message">
+      <h2>أنا عارف يا رقوشتي يا حبيبتي إن أنا بتعصب عليكي كتير آخر فترة، بس متزعليش مني ❤️🥹💗</h2>
+      <p>بصي بقى يا حبيبتي، أنا عايزك تعرفي إنك غالية عندي أوي، وإن مكانتك عندي مش شبه أي حد تاني. إنتي بقيتي جزء مهم من يومي ومن حياتي، ووجودك بيفرق معايا أكتر ما تتخيلي. ❤️</p>
+      <p>أنا عارف إن ساعات بتعصب، وإن ممكن أتكلم بطريقة تضايقك، وده مش معناه أبدًا إنك مش مهمة عندي، بالعكس والله، إنتي من أكتر الناس اللي فارقين معايا، وعشان كده نفسي دايمًا أكون أحسن معاكي وأعرف أعبّرلك عن اللي جوايا من غير ما أزعلك. 🥹💗</p>
+      <p>يا رقوشتي، إنتي بالنسبالي مش مجرد شخص في حياتي، إنتي حد قريب من قلبي، وحد وجوده بيفرحني، وحد بحب أحكيله وأشاركه تفاصيل يومي، حتى التفاصيل الصغيرة اللي ممكن متفرقش مع أي حد تاني. 💕</p>
+      <p>أنا ممتن لوجودك في حياتي، وبحس إن ربنا رزقني بحد جميل أوي، حد بيفهمني وبيهتم بيا وبيحاول يكون جنبي. وبتمنى من قلبي إننا نفضل دايمًا نعرف نتكلم ونفهم بعض، وإن أي زعل بينا نعرف نحلّه بالهدوء والاهتمام. ❤️</p>
+      <p>وعارف إنك ساعات بتزعلي بسرعة، وإن الصلح ممكن ياخد وقت، بس أنا مش عايز أي خلاف صغير ينسينا كل الحاجات الحلوة اللي بينا. خلينا دايمًا ندي لبعض فرصة نتكلم ونسمع بعض، لأن مشاعرنا تستاهل مننا إننا نحافظ عليها. 🫶🏻</p>
+      <p>بحب اهتمامك بيا، وبحب خوفك عليا، وبحب إحساس إن في حد بيسأل عليا ويفتكرني. وحتى لما بنختلف، بيفضل عندي أمل إننا نقدر نفهم بعض أكتر ونتعلم إزاي نتعامل بطريقة تخلينا مرتاحين وسعداء. 💗</p>
+      <p>أنا مش بوعدك إني هبقى مثالي ومش هغلط أبدًا، لكن أقدر أقولك إني هحاول أراجع نفسي، وأسمعك كويس، وأحترم زعلك، وأعتذر لما أكون غلطان، لأنك تستاهلي معاملة حلوة وكلام يطمن قلبك. 🌷</p>
+      <p>يا أحلى رقوشتي، أتمنى نفضل نضحك مع بعض، ونحكي لبعض، ونفرح لفرحة بعض، ونكون سند لبعض وقت ما الدنيا تبقى صعبة. وأتمنى لما تفتكري الرسالة دي، تفتكري إن في حد بيقدّرك وبيفرح بوجودك في حياته. ❤️</p>
+      <p>ولو في يوم زعلتك من غير ما أقصد، قوليلي، وأنا هحاول أسمعك وأفهم إيه اللي ضايقك. مش لازم نكون متفقين في كل حاجة، المهم نعرف نختلف باحترام ونرجع نتكلم بحب. 🥹</p>
+      <p>وفي الآخر يا حبيبتي، عايزك تعرفي إنك غالية أوي، وإن كل كلمة هنا كتبتها عشان أوصلك جزء من اللي جوايا. ربنا يديم بينا الود والضحكة والراحة، ويخلينا دايمًا سبب في فرحة بعض. 💖</p>
+      <div class="signature">بحبك يا رقوشتي ❤️😘<br>إنتي ليكي مكانة خاصة عندي 💗</div>
+    </article>
+    <div class="request-container">
+      <button class="request-btn" id="requestButton" type="button" aria-expanded="false" aria-controls="requestMessage">ممكن طلب؟ 🥹❤️</button>
+      <div id="requestMessage" class="request-message">
+        <p>أنا عايز أروح الحجز يا حبيبتي ❤️🥹</p>
+        <p>ومعلشي هنزل أقعد مع صحابي شوية 🙂</p>
+        <span>بحبك يا رقوشتي ❤️😘</span>
+      </div>
+    </div>
+    <div class="footer">معمولة مخصوص عشانك يا رقوشتي 💗</div>
+  </div>
+</section>
+
+<!-- ضعي ملف music.mp3 في نفس مجلد ملف HTML. -->
+<audio id="music" loop preload="none">
+  <source src="music.mp3" type="audio/mpeg">
+  متصفحك لا يدعم تشغيل الصوت.
+</audio>
+
+<script>
+"use strict";
+
+const correctPassword = "yr";
+const intro = document.getElementById("intro");
+const lovePage = document.getElementById("lovePage");
+const passwordInput = document.getElementById("password");
+const errorMessage = document.getElementById("error");
+const music = document.getElementById("music");
+const musicButton = document.getElementById("musicButton");
+const musicStatus = document.getElementById("musicStatus");
+const requestButton = document.getElementById("requestButton");
+const requestMessage = document.getElementById("requestMessage");
+
+document.getElementById("loginForm").addEventListener("submit", function(event) {
+  event.preventDefault();
+  const entered = passwordInput.value;
+
+  if (entered === correctPassword) {
+    intro.style.display = "none";
+    lovePage.style.display = "block";
+    errorMessage.textContent = "";
+    startDecorations();
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  } else {
+    errorMessage.textContent = "كلمة السر مش صح يا رقوشتي ❤️";
+    passwordInput.value = "";
+    passwordInput.focus();
+  }
+});
+
+requestButton.addEventListener("click", function() {
+  const isVisible = requestMessage.style.display === "block";
+  requestMessage.style.display = isVisible ? "none" : "block";
+  requestButton.setAttribute("aria-expanded", String(!isVisible));
+});
+
+function updateMusicUI(isPlaying) {
+  musicButton.textContent = isPlaying ? "⏸️ إيقاف الموسيقى" : "🎵 تشغيل الموسيقى";
+  musicButton.setAttribute("aria-pressed", String(isPlaying));
+  if (isPlaying) {
+    musicStatus.textContent = "الموسيقى شغالة ❤️";
+  } else if (music.error) {
+    musicStatus.textContent = "مش لاقي ملف music.mp3. حطيه جنب ملف HTML ❤️";
+  } else {
+    musicStatus.textContent = "اضغطي الزر لتشغيل الموسيقى ❤️";
+  }
+}
+
+musicButton.addEventListener("click", async function() {
+  if (music.paused) {
+    try {
+      await music.play();
+    } catch (error) {
+      musicStatus.textContent = "تأكدي إن ملف music.mp3 موجود جنب ملف HTML وبصيغة MP3 ❤️";
+      updateMusicUI(false);
+    }
+  } else {
+    music.pause();
+  }
+});
+
+music.addEventListener("play", () => updateMusicUI(true));
+music.addEventListener("pause", () => updateMusicUI(false));
+music.addEventListener("ended", () => updateMusicUI(false));
+music.addEventListener("error", () => {
+  musicStatus.textContent = "مش قادر أشغّل الموسيقى. تأكدي من وجود ملف music.mp3 بجوار الصفحة ❤️";
+  updateMusicUI(false);
+});
+
+let decorationsStarted = false;
+let heartTimer = null;
+let starTimer = null;
+
+function startDecorations() {
+  if (decorationsStarted) return;
+  decorationsStarted = true;
+
+  const hearts = ["❤️", "💗", "💕", "💖", "✨", "💘"];
+
+  heartTimer = window.setInterval(() => {
+    const heart = document.createElement("div");
+    heart.className = "floating";
+    heart.textContent = hearts[Math.floor(Math.random() * hearts.length)];
+    heart.style.left = Math.random() * 95 + "vw";
+    heart.style.fontSize = (16 + Math.random() * 20) + "px";
+    heart.style.animationDuration = (5 + Math.random() * 5) + "s";
+    document.body.appendChild(heart);
+    window.setTimeout(() => heart.remove(), 11000);
+  }, 700);
+
+  starTimer = window.setInterval(() => {
+    const star = document.createElement("div");
+    star.className = "star";
+    star.textContent = "✦";
+    star.style.left = Math.random() * 98 + "vw";
+    star.style.top = Math.random() * 95 + "vh";
+    star.style.fontSize = (10 + Math.random() * 12) + "px";
+    document.body.appendChild(star);
+    window.setTimeout(() => star.remove(), 3000);
+  }, 900);
+}
+
+updateMusicUI(false);
+</script>
+</body>
+</html>
